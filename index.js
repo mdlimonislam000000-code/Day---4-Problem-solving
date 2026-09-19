@@ -60,3 +60,15 @@ const invertObject = (obj) =>{
     }, {});
 }
 console.log('Peoblem - 19 :',invertObject({a: 1, b: 2}));
+
+// Problem  20 
+
+const findDuplicateNames = (arr) => {
+    const counts = {};
+    arr.forEach(item => {
+        counts[item.name] = (counts[item.name] || 0) + 1;
+    });
+    return Object.keys(counts).filter(name => counts[name] > 1);
+};
+
+console.log('Problem - 20 :',findDuplicateNames([{name: 'Ali'}, {name: 'Sara'}, {name: 'Ali'}, {name: 'Sara'}, {name: 'John'}]));
