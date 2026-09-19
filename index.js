@@ -50,3 +50,13 @@ const fizzBuzz = (n) =>{
     return result.join(', ');
 }
 console.log('Problem - 18 :',fizzBuzz(15));
+
+// Problem 19 
+
+const invertObject = (obj) =>{
+    return Object.entries(obj).reduce((acc, [key, value]) => {
+        acc[value] = key;
+        return acc;
+    }, {});
+}
+console.log('Peoblem - 19 :',invertObject({a: 1, b: 2}));
