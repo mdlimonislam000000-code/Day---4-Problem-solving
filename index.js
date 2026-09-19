@@ -31,3 +31,22 @@ const mergeObjects = (obj1, obj2) => {
 };
 
 console.log('Problem - 17 :',mergeObjects({a: 1, x: 10}, {b: 2, x: 20}));
+
+// Problem 18 
+
+const fizzBuzz = (n) =>{
+    const result = [] ;
+    for (let i = 1; i <= n; i++){
+        if (i % 3 === 0 && i % 5 === 0) {
+            result.push('FizzBuzz');
+        } else if (i % 3 === 0) {
+            result.push('Fizz');
+        } else if (i % 5 === 0) {
+            result.push('Buzz');
+        } else {
+            result.push(i);
+        }
+    }
+    return result.join(', ');
+}
+console.log('Problem - 18 :',fizzBuzz(15));
